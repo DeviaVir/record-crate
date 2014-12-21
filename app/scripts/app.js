@@ -15,10 +15,22 @@
 
     var crate = function(category) {
       app.category = category;
+      console.log(app.category);
       app.$.ajax.go();
       app.heading = category.charAt(0).toUpperCase() + category.slice(1);
-      if (app.heading === 'All') {
-        app.heading = 'All Music';
+      switch(app.heading.toLowerCase()) {
+        case 'all':
+          app.heading = 'All Music';
+        break;
+        case 'bpm':
+          app.heading = 'Music by BPM';
+        break;
+        case 'artist':
+          app.heading = 'Music by Artist';
+        break;
+        case 'date':
+          app.heading = 'Music by date added';
+        break;
       }
       // In a non-sample app you probably would want to match the
       // routes to pages in a dictionary and then use valueattr on

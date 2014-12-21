@@ -17,7 +17,22 @@
         <core-menu selected="0" on-core-select="{{closeDrawer}}">
           <paper-item noink>
             <a href="/music/all" on-click="{{navigate}}">
-              All
+              All (by name)
+            </a>
+          </paper-item>
+          <paper-item noink>
+            <a href="/music/bpm" on-click="{{navigate}}">
+              By BPM
+            </a>
+          </paper-item>
+          <paper-item noink>
+            <a href="/music/artist" on-click="{{navigate}}">
+              By artist
+            </a>
+          </paper-item>
+          <paper-item noink>
+            <a href="/music/date" on-click="{{navigate}}">
+              By date added
             </a>
           </paper-item>
         </core-menu>
